@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ STATIC_URL }}scss/style.css">
+</head>
+<body>
+    <header>
+        <h1><a href="/">{% block header_title %}{% endblock %}</a></h1>
+    </header>
+    {% block content %}{% endblock %}
+    {% include "footer.html" %}
+</body>
