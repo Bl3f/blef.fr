@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <head>
     <title>{% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="{{ STATIC_URL }}scss/style.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/main.css">
 </head>
 <body>
     <header>
         <h1><a href="/">{% block header_title %}{% endblock %}</a></h1>
     </header>
-    {% block content %}{% endblock %}
+    <section>
+        {% block content %}{% endblock %}
+    </section>
     {% include "footer.html" %}
 </body>

@@ -1,0 +1,135 @@
+$home-color: #006C80;
+$experience-color: #EBCAB8;
+$resume-color: #FE8315;
+$contact-color: #FA3113;
+
+@mixin nav-tab($color) {
+  background-image:-webkit-linear-gradient($color, $color);
+  background-image:	-moz-linear-gradient($color, $color);
+  background-image:	  -o-linear-gradient($color, $color);
+  background-image:		 linear-gradient($color, $color);
+}
+
+@font-face {
+  font-family: "coolvetica";
+  src: url('../fonts/coolvetica.ttf');
+}
+
+@font-face {
+  font-family: "KyrillaSansSerif";
+  src: url('../fonts/KyrillaSansSerif.ttf');
+}
+
+.nav1 { @include nav-tab($home-color); }
+.nav2 { @include nav-tab($experience-color); }
+.nav3 { @include nav-tab($resume-color); }
+.nav4 { @include nav-tab($contact-color); }
+
+header {
+  h1 {
+    display: block;
+    font-family: "coolvetica","Arial";
+    font-size: 6em;
+    font-weight: 100;
+    width: 200px;
+    margin: 0 20% 0 20%;
+  }
+}
+
+a {
+  color:black;
+  text-decoration: none;
+}
+
+section {
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto 0 auto;
+  min-height: 320px;
+}
+
+nav {
+  display: block;
+  width: 60%;
+  min-width: 500px;
+  max-width: 850px;
+  margin: 0px auto 0px auto;
+  padding: 0;
+
+  a {
+    color: inherit;
+  }
+
+  ul {
+    list-style: none;
+    margin:  0;
+    padding: 0;
+
+    a {
+      li {
+        font-family: "coolvetica","Arial";
+        font-size: 3.5em;
+        text-transform: uppercase;
+        text-align: right;
+        vertical-align: text-bottom;
+        color: #FFF;
+        height: 80px;
+        margin: 0px 0px 0px 0px;
+        background-repeat: no-repeat;
+        background-position: 0px 0px;
+        -webkit-transition: background-position 1.4s cubic-bezier(0.320, 1.650, 0.470, -0.385), color .6s cubic-bezier(0.320, 1.650, 0.470, -0.385) 0.2s;
+        -moz-transition: background-position 1.4s cubic-bezier(0.320, 1.650, 0.470, -0.385), color .6s cubic-bezier(0.320, 1.650, 0.470, -0.385) 0.6s;
+        -o-transition: background-position 1.4s cubic-bezier(0.320, 1.650, 0.470, -0.385), color .6s cubic-bezier(0.320, 1.650, 0.470, -0.385) 0.6s;
+        transition: background-position 1.4s cubic-bezier(0.320, 1.650, 0.470, -0.385), color .6s cubic-bezier(0.320, 1.650, 0.470, -0.385) 0.2s;
+
+      }
+    }
+
+    a:hover {
+      &> li, nav > ul > a:focus > li {
+        background-repeat: no-repeat;
+        background-position: 850px 0px;
+      }
+
+      &> .nav1{color : $home-color;}
+      &> .nav2{color : $experience-color;}
+      &> .nav3{color : $resume-color;}
+      &> .nav4{color : $contact-color;}
+    }
+  }
+}
+
+footer {
+  width: 500px;
+  height: 100px;
+  margin: 10px auto 0 auto;
+  text-align: center;
+
+  a {
+    img {
+      vertical-align: middle;
+      padding-left: 30px;
+      opacity: 0.2;
+      -webkit-filter: grayscale(1);
+      -moz-filter: grayscale(1);
+      -ms-filter: grayscale(1);
+      -o-filter: grayscale(1);
+      filter: grayscale(1);
+      -webkit-transition: opacity 1s ease;
+      -moz-transition: opacity 1s ease;
+      -ms-transition: opacity 1s ease;
+      -o-transition: opacity 1s ease;
+      transition: opacity 1s ease;
+
+      &:hover {
+        opacity: 1;
+        -webkit-filter: grayscale(0);
+        -moz-filter: grayscale(0);
+        -ms-filter: grayscale(0);
+        -o-filter: grayscale(0);
+        filter: grayscale(0);
+      }
+    }
+  }
+}
