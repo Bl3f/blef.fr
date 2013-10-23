@@ -12,7 +12,7 @@ header_title = 'blef'
 def index(request):
     index_context = {
         'header_title': header_title,
-        'nav_menu': ['home', 'experience', 'resume', 'contact'],
+        'nav_menu': ['home', 'portfolio', 'resume', 'contact'],
     }
     return render(request, "front/index.html", index_context)
 
@@ -46,3 +46,31 @@ class ContactView(TemplateView):
 
 contact_index = ContactView.as_view()
 contact = contact_index
+
+
+class ResumeView(TemplateView):
+
+    def get(self, request, *args, **kwargs):
+        context = self.get_context_data(**kwargs)
+        context['header_title'] = header_title
+
+        return self.render_to_response(context)
+
+    template_name = "front/resume.html"
+
+resume_index = ResumeView.as_view()
+resume = resume_index
+
+
+class PortfolioView(TemplateView):
+
+    def get(self, request, *args, **kwargs):
+        context = self.get_context_data(**kwargs)
+        context['header_title'] = header_title
+
+        return self.render_to_response(context)
+
+    template_name = "front/portfolio.html"
+
+portfolio_index = PortfolioView.as_view()
+portfolio = portfolio_index

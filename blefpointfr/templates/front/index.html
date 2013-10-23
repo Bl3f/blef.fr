@@ -4,11 +4,5 @@
 {% block header_title %}{{ header_title }}{% endblock %}
 
 {% block content %}
-<nav>
-    <ul>
-        {% for element in nav_menu %}
-            <a href="{{ element }}"><li class="nav{{ forloop.counter }}">{{ element }}</li></a>
-        {% endfor %}
-    </ul>
-</nav>
+
 {% endblock %}

@@ -32,7 +32,7 @@ header {
     font-size: 6em;
     font-weight: 100;
     width: 200px;
-    margin: 0 20% 0 20%;
+    margin: 0 0px 0 -28px;
   }
 }
 
@@ -67,9 +67,10 @@ nav {
     padding: 0;
 
     a {
+      display: block;
       li {
         font-family: "coolvetica","Arial";
-        font-size: 3.5em;
+        font-size: 5.2em;
         text-transform: uppercase;
         text-align: right;
         vertical-align: text-bottom;
@@ -101,35 +102,57 @@ nav {
 }
 
 footer {
-  width: 500px;
-  height: 100px;
-  margin: 10px auto 0 auto;
-  text-align: center;
+  position: fixed;
+  width: 100px;
+  height: 200px;
+  left: 150px;
+  top: 210px;
+  li {
+    text-align: center;
+    list-style: none;
+    a {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      img {
+        opacity: 0.2;
+        -webkit-filter: grayscale(1);
+        -moz-filter: grayscale(1);
+        -ms-filter: grayscale(1);
+        -o-filter: grayscale(1);
+        filter: grayscale(1);
+        -webkit-transition: opacity 1s ease;
+        -moz-transition: opacity 1s ease;
+        -ms-transition: opacity 1s ease;
+        -o-transition: opacity 1s ease;
+        transition: opacity 1s ease;
 
-  a {
-    img {
-      vertical-align: middle;
-      padding-left: 30px;
-      opacity: 0.2;
-      -webkit-filter: grayscale(1);
-      -moz-filter: grayscale(1);
-      -ms-filter: grayscale(1);
-      -o-filter: grayscale(1);
-      filter: grayscale(1);
-      -webkit-transition: opacity 1s ease;
-      -moz-transition: opacity 1s ease;
-      -ms-transition: opacity 1s ease;
-      -o-transition: opacity 1s ease;
-      transition: opacity 1s ease;
-
-      &:hover {
-        opacity: 1;
-        -webkit-filter: grayscale(0);
-        -moz-filter: grayscale(0);
-        -ms-filter: grayscale(0);
-        -o-filter: grayscale(0);
-        filter: grayscale(0);
+        &:hover {
+          opacity: 1;
+          -webkit-filter: grayscale(0);
+          -moz-filter: grayscale(0);
+          -ms-filter: grayscale(0);
+          -o-filter: grayscale(0);
+          filter: grayscale(0);
+        }
       }
     }
   }
+}
+
+.single_page {
+    display: block;
+    height: 10px;
+    top: 0;
+    width: 60%;
+    min-width: 500px;
+    max-width: 850px;
+    margin: 0px auto 0px auto;
+    position: absolute;
+}
+
+.home {
+    img {
+        text-align: left;
+    }
 }

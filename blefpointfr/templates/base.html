@@ -2,13 +2,25 @@
 <head>
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{{ STATIC_URL }}css/main.css">
+    <script src="{{ STATIC_URL }}js/jquery-2.0.3.min.js"></script>
     <script src="{{ STATIC_URL }}js/home.js"></script>
 </head>
 <body>
-    <header>
-        <h1><a href="/">{% block header_title %}{% endblock %}</a></h1>
-    </header>
     <section>
+        <nav>
+            <header>
+                <h1><a href="/">{% block header_title %}{% endblock %}</a></h1>
+                {% block nav_header %}
+                    <ul>
+                        {% for element in nav_menu %}
+                            <a id="{{ element }}" href="{{ element }}">
+                                <li class="nav{{ forloop.counter }}">{{ element }}</li>
+                            </a>
+                        {% endfor %}
+                    </ul>
+                {% endblock %}
+            </header>
+        </nav>
         {% block content %}{% endblock %}
     </section>
     {% include "footer.html" %}

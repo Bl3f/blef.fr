@@ -1,117 +1,188 @@
 @font-face {
   font-family: "coolvetica";
-  src: url("../fonts/coolvetica.ttf"); }
+  src: url("../fonts/coolvetica.ttf");
+}
 
 @font-face {
   font-family: "KyrillaSansSerif";
-  src: url("../fonts/KyrillaSansSerif.ttf"); }
+  src: url("../fonts/KyrillaSansSerif.ttf");
+}
 
+/* line 23, ../scss/main.scss */
 .nav1 {
   background-image: -webkit-linear-gradient(#006c80, #006c80);
   background-image: -moz-linear-gradient(#006c80, #006c80);
   background-image: -o-linear-gradient(#006c80, #006c80);
-  background-image: linear-gradient(#006c80, #006c80); }
+  background-image: linear-gradient(#006c80, #006c80);
+}
 
+/* line 24, ../scss/main.scss */
 .nav2 {
   background-image: -webkit-linear-gradient(#ebcab8, #ebcab8);
   background-image: -moz-linear-gradient(#ebcab8, #ebcab8);
   background-image: -o-linear-gradient(#ebcab8, #ebcab8);
-  background-image: linear-gradient(#ebcab8, #ebcab8); }
+  background-image: linear-gradient(#ebcab8, #ebcab8);
+}
 
+/* line 25, ../scss/main.scss */
 .nav3 {
   background-image: -webkit-linear-gradient(#fe8315, #fe8315);
   background-image: -moz-linear-gradient(#fe8315, #fe8315);
   background-image: -o-linear-gradient(#fe8315, #fe8315);
-  background-image: linear-gradient(#fe8315, #fe8315); }
+  background-image: linear-gradient(#fe8315, #fe8315);
+}
 
+/* line 26, ../scss/main.scss */
 .nav4 {
   background-image: -webkit-linear-gradient(#fa3113, #fa3113);
   background-image: -moz-linear-gradient(#fa3113, #fa3113);
   background-image: -o-linear-gradient(#fa3113, #fa3113);
-  background-image: linear-gradient(#fa3113, #fa3113); }
+  background-image: linear-gradient(#fa3113, #fa3113);
+}
 
+/* line 29, ../scss/main.scss */
 header h1 {
   display: block;
   font-family: "coolvetica","Arial";
   font-size: 6em;
   font-weight: 100;
   width: 200px;
-  margin: 0 20% 0 20%; }
+  margin: 0 0px 0 -28px;
+}
 
+/* line 39, ../scss/main.scss */
 a {
   color: black;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
+/* line 44, ../scss/main.scss */
 section {
   display: block;
   text-align: center;
   width: 100%;
   margin: 0 auto 0 auto;
-  min-height: 320px; }
+  min-height: 320px;
+}
 
+/* line 52, ../scss/main.scss */
 nav {
   display: block;
   width: 60%;
   min-width: 500px;
   max-width: 850px;
   margin: 0px auto 0px auto;
-  padding: 0; }
-  nav a {
-    color: inherit; }
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0; }
-    nav ul a li {
-      font-family: "coolvetica","Arial";
-      font-size: 3.5em;
-      text-transform: uppercase;
-      text-align: right;
-      vertical-align: text-bottom;
-      color: #FFF;
-      height: 80px;
-      margin: 0px 0px 0px 0px;
-      background-repeat: no-repeat;
-      background-position: 0px 0px;
-      -webkit-transition: background-position 1.4s cubic-bezier(0.32, 1.65, 0.47, -0.385), color 0.6s cubic-bezier(0.32, 1.65, 0.47, -0.385) 0.2s;
-      -moz-transition: background-position 1.4s cubic-bezier(0.32, 1.65, 0.47, -0.385), color 0.6s cubic-bezier(0.32, 1.65, 0.47, -0.385) 0.6s;
-      -o-transition: background-position 1.4s cubic-bezier(0.32, 1.65, 0.47, -0.385), color 0.6s cubic-bezier(0.32, 1.65, 0.47, -0.385) 0.6s;
-      transition: background-position 1.4s cubic-bezier(0.32, 1.65, 0.47, -0.385), color 0.6s cubic-bezier(0.32, 1.65, 0.47, -0.385) 0.2s; }
-    nav ul a:hover > li, nav ul a:hover nav > ul > a:focus > li {
-      background-repeat: no-repeat;
-      background-position: 850px 0px; }
-    nav ul a:hover > .nav1 {
-      color: #006c80; }
-    nav ul a:hover > .nav2 {
-      color: #ebcab8; }
-    nav ul a:hover > .nav3 {
-      color: #fe8315; }
-    nav ul a:hover > .nav4 {
-      color: #fa3113; }
+  padding: 0;
+}
+/* line 60, ../scss/main.scss */
+nav a {
+  color: inherit;
+}
+/* line 64, ../scss/main.scss */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* line 69, ../scss/main.scss */
+nav ul a {
+  display: block;
+}
+/* line 71, ../scss/main.scss */
+nav ul a li {
+  font-family: "coolvetica","Arial";
+  font-size: 5.2em;
+  text-transform: uppercase;
+  text-align: right;
+  vertical-align: text-bottom;
+  color: #FFF;
+  height: 80px;
+  margin: 0px 0px 0px 0px;
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  -webkit-transition: background-position 1.4s cubic-bezier(0.32, 1.65, 0.47, -0.385), color 0.6s cubic-bezier(0.32, 1.65, 0.47, -0.385) 0.2s;
+  -moz-transition: background-position 1.4s cubic-bezier(0.32, 1.65, 0.47, -0.385), color 0.6s cubic-bezier(0.32, 1.65, 0.47, -0.385) 0.6s;
+  -o-transition: background-position 1.4s cubic-bezier(0.32, 1.65, 0.47, -0.385), color 0.6s cubic-bezier(0.32, 1.65, 0.47, -0.385) 0.6s;
+  transition: background-position 1.4s cubic-bezier(0.32, 1.65, 0.47, -0.385), color 0.6s cubic-bezier(0.32, 1.65, 0.47, -0.385) 0.2s;
+}
+/* line 91, ../scss/main.scss */
+nav ul a:hover > li, nav ul a:hover nav > ul > a:focus > li {
+  background-repeat: no-repeat;
+  background-position: 850px 0px;
+}
+/* line 96, ../scss/main.scss */
+nav ul a:hover > .nav1 {
+  color: #006c80;
+}
+/* line 97, ../scss/main.scss */
+nav ul a:hover > .nav2 {
+  color: #ebcab8;
+}
+/* line 98, ../scss/main.scss */
+nav ul a:hover > .nav3 {
+  color: #fe8315;
+}
+/* line 99, ../scss/main.scss */
+nav ul a:hover > .nav4 {
+  color: #fa3113;
+}
 
+/* line 104, ../scss/main.scss */
 footer {
-  width: 500px;
-  height: 100px;
-  margin: 10px auto 0 auto;
-  text-align: center; }
-  footer a img {
-    vertical-align: middle;
-    padding-left: 30px;
-    opacity: 0.2;
-    -webkit-filter: grayscale(1);
-    -moz-filter: grayscale(1);
-    -ms-filter: grayscale(1);
-    -o-filter: grayscale(1);
-    filter: grayscale(1);
-    -webkit-transition: opacity 1s ease;
-    -moz-transition: opacity 1s ease;
-    -ms-transition: opacity 1s ease;
-    -o-transition: opacity 1s ease;
-    transition: opacity 1s ease; }
-    footer a img:hover {
-      opacity: 1;
-      -webkit-filter: grayscale(0);
-      -moz-filter: grayscale(0);
-      -ms-filter: grayscale(0);
-      -o-filter: grayscale(0);
-      filter: grayscale(0); }
+  position: fixed;
+  width: 100px;
+  height: 200px;
+  left: 150px;
+  top: 210px;
+}
+/* line 110, ../scss/main.scss */
+footer li {
+  text-align: center;
+  list-style: none;
+}
+/* line 113, ../scss/main.scss */
+footer li a {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+/* line 117, ../scss/main.scss */
+footer li a img {
+  opacity: 0.2;
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  -ms-filter: grayscale(1);
+  -o-filter: grayscale(1);
+  filter: grayscale(1);
+  -webkit-transition: opacity 1s ease;
+  -moz-transition: opacity 1s ease;
+  -ms-transition: opacity 1s ease;
+  -o-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
+/* line 130, ../scss/main.scss */
+footer li a img:hover {
+  opacity: 1;
+  -webkit-filter: grayscale(0);
+  -moz-filter: grayscale(0);
+  -ms-filter: grayscale(0);
+  -o-filter: grayscale(0);
+  filter: grayscale(0);
+}
+
+/* line 143, ../scss/main.scss */
+.single_page {
+  display: block;
+  height: 10px;
+  top: 0;
+  width: 60%;
+  min-width: 500px;
+  max-width: 850px;
+  margin: 0px auto 0px auto;
+  position: absolute;
+}
+
+/* line 155, ../scss/main.scss */
+.home img {
+  text-align: left;
+}
