@@ -2,25 +2,35 @@
 <head>
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{{ STATIC_URL }}css/main.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/bike.css">
     <script src="{{ STATIC_URL }}js/jquery-2.0.3.min.js"></script>
     <script src="{{ STATIC_URL }}js/home.js"></script>
 </head>
 <body>
+    <nav>
+        <header>
+            {% block nav_header %}
+                <div class="single_page">
+                    <div class="homepage nav1"></div>
+                    <div class="homepage nav2"></div>
+                    <div class="homepage nav3"></div>
+                    <div class="homepage nav4"></div>
+                </div>
+            {% endblock %}
+            <h1><a href="{% url "index" %}">{% block header_title %}{% endblock %}</a></h1>
+            <ul>
+                <a id="home" href="{% url "index" %}">
+                    <li class="nav0"><img src="{{ STATIC_URL }}images/home.png" width="25"></li>
+                </a>
+                {% for element in nav_menu %}
+                        <a id="{{ element }}" href="{% url element %}">
+                            <li class="nav{{ forloop.counter }}">{{ element }}</li>
+                        </a>
+                {% endfor %}
+            </ul>
+        </header>
+    </nav>
     <section>
-        <nav>
-            <header>
-                <h1><a href="/">{% block header_title %}{% endblock %}</a></h1>
-                {% block nav_header %}
-                    <ul>
-                        {% for element in nav_menu %}
-                            <a id="{{ element }}" href="{{ element }}">
-                                <li class="nav{{ forloop.counter }}">{{ element }}</li>
-                            </a>
-                        {% endfor %}
-                    </ul>
-                {% endblock %}
-            </header>
-        </nav>
         {% block content %}{% endblock %}
     </section>
     {% include "footer.html" %}

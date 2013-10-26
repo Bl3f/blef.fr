@@ -1,3 +1,23 @@
+/* line 3, ../scss/main.scss */
+.single_page.nav1, .homepage.nav1 {
+  background: #006c80;
+}
+
+/* line 4, ../scss/main.scss */
+.single_page.nav2, .homepage.nav2 {
+  background: #ebcab8;
+}
+
+/* line 5, ../scss/main.scss */
+.single_page.nav3, .homepage.nav3 {
+  background: #fe8315;
+}
+
+/* line 6, ../scss/main.scss */
+.single_page.nav4, .homepage.nav4 {
+  background: #fa3113;
+}
+
 @font-face {
   font-family: "coolvetica";
   src: url("../fonts/coolvetica.ttf");
@@ -8,64 +28,48 @@
   src: url("../fonts/KyrillaSansSerif.ttf");
 }
 
+/* line 18, ../scss/main.scss */
+body, html {
+  margin: 0;
+  height: 100%;
+}
+
 /* line 23, ../scss/main.scss */
-.nav1 {
-  background-image: -webkit-linear-gradient(#006c80, #006c80);
-  background-image: -moz-linear-gradient(#006c80, #006c80);
-  background-image: -o-linear-gradient(#006c80, #006c80);
-  background-image: linear-gradient(#006c80, #006c80);
+header {
+  color: #000;
 }
-
-/* line 24, ../scss/main.scss */
-.nav2 {
-  background-image: -webkit-linear-gradient(#ebcab8, #ebcab8);
-  background-image: -moz-linear-gradient(#ebcab8, #ebcab8);
-  background-image: -o-linear-gradient(#ebcab8, #ebcab8);
-  background-image: linear-gradient(#ebcab8, #ebcab8);
-}
-
 /* line 25, ../scss/main.scss */
-.nav3 {
-  background-image: -webkit-linear-gradient(#fe8315, #fe8315);
-  background-image: -moz-linear-gradient(#fe8315, #fe8315);
-  background-image: -o-linear-gradient(#fe8315, #fe8315);
-  background-image: linear-gradient(#fe8315, #fe8315);
-}
-
-/* line 26, ../scss/main.scss */
-.nav4 {
-  background-image: -webkit-linear-gradient(#fa3113, #fa3113);
-  background-image: -moz-linear-gradient(#fa3113, #fa3113);
-  background-image: -o-linear-gradient(#fa3113, #fa3113);
-  background-image: linear-gradient(#fa3113, #fa3113);
-}
-
-/* line 29, ../scss/main.scss */
 header h1 {
-  display: block;
-  font-family: "coolvetica","Arial";
+  display: inline-block;
+  font-family: "coolvetica", "Arial";
   font-size: 6em;
   font-weight: 100;
-  width: 200px;
-  margin: 0 0px 0 -28px;
+  width: 19%;
+  margin: 0;
+  text-align: left;
 }
 
-/* line 39, ../scss/main.scss */
+/* line 36, ../scss/main.scss */
 a {
   color: black;
   text-decoration: none;
 }
 
-/* line 44, ../scss/main.scss */
+/* line 41, ../scss/main.scss */
 section {
   display: block;
   text-align: center;
-  width: 100%;
-  margin: 0 auto 0 auto;
+  width: 60%;
+  height: 100%;
+  min-width: 500px;
+  max-width: 850px;
+  margin: 0px auto 0px auto;
+  padding: 1px 0 10px 0;
   min-height: 320px;
+  background: white;
 }
 
-/* line 52, ../scss/main.scss */
+/* line 54, ../scss/main.scss */
 nav {
   display: block;
   width: 60%;
@@ -73,56 +77,47 @@ nav {
   max-width: 850px;
   margin: 0px auto 0px auto;
   padding: 0;
+  background: white;
 }
-/* line 60, ../scss/main.scss */
+/* line 63, ../scss/main.scss */
 nav a {
   color: inherit;
 }
-/* line 64, ../scss/main.scss */
+/* line 67, ../scss/main.scss */
 nav ul {
+  display: inline-block;
+  width: 80%;
   list-style: none;
   margin: 0;
   padding: 0;
+  text-align: right;
 }
-/* line 69, ../scss/main.scss */
+/* line 75, ../scss/main.scss */
 nav ul a {
-  display: block;
+  display: inline-block;
 }
-/* line 71, ../scss/main.scss */
+/* line 77, ../scss/main.scss */
 nav ul a li {
-  font-family: "coolvetica","Arial";
-  font-size: 5.2em;
+  font-family: "coolvetica", "Arial";
+  font-size: 2em;
   text-transform: uppercase;
   text-align: right;
-  vertical-align: text-bottom;
-  color: #FFF;
-  height: 80px;
-  margin: 0px 0px 0px 0px;
-  background-repeat: no-repeat;
-  background-position: 0px 0px;
-  -webkit-transition: background-position 1.4s cubic-bezier(0.32, 1.65, 0.47, -0.385), color 0.6s cubic-bezier(0.32, 1.65, 0.47, -0.385) 0.2s;
-  -moz-transition: background-position 1.4s cubic-bezier(0.32, 1.65, 0.47, -0.385), color 0.6s cubic-bezier(0.32, 1.65, 0.47, -0.385) 0.6s;
-  -o-transition: background-position 1.4s cubic-bezier(0.32, 1.65, 0.47, -0.385), color 0.6s cubic-bezier(0.32, 1.65, 0.47, -0.385) 0.6s;
-  transition: background-position 1.4s cubic-bezier(0.32, 1.65, 0.47, -0.385), color 0.6s cubic-bezier(0.32, 1.65, 0.47, -0.385) 0.2s;
+  height: 30px;
+  margin: 0px;
 }
-/* line 91, ../scss/main.scss */
-nav ul a:hover > li, nav ul a:hover nav > ul > a:focus > li {
-  background-repeat: no-repeat;
-  background-position: 850px 0px;
-}
-/* line 96, ../scss/main.scss */
+/* line 88, ../scss/main.scss */
 nav ul a:hover > .nav1 {
   color: #006c80;
 }
-/* line 97, ../scss/main.scss */
+/* line 91, ../scss/main.scss */
 nav ul a:hover > .nav2 {
   color: #ebcab8;
 }
-/* line 98, ../scss/main.scss */
+/* line 94, ../scss/main.scss */
 nav ul a:hover > .nav3 {
   color: #fe8315;
 }
-/* line 99, ../scss/main.scss */
+/* line 97, ../scss/main.scss */
 nav ul a:hover > .nav4 {
   color: #fa3113;
 }
@@ -182,7 +177,45 @@ footer li a img:hover {
   position: absolute;
 }
 
-/* line 155, ../scss/main.scss */
+/* line 154, ../scss/main.scss */
+.homepage {
+  display: inline-block;
+  width: 25%;
+  height: 10px;
+  margin: 0px -4px 0 0;
+  top: -4px;
+  position: relative;
+}
+
+/* line 164, ../scss/main.scss */
 .home img {
   text-align: left;
+}
+
+/* line 169, ../scss/main.scss */
+article {
+  min-width: 500px;
+  max-width: 850px;
+  margin: 0px auto 0px auto;
+}
+/* line 174, ../scss/main.scss */
+article p {
+  margin-left: 50px;
+  font-family: "coolvetica", "Arial";
+  text-align: left;
+  color: #006c80;
+  font-size: 1.2em;
+}
+/* line 181, ../scss/main.scss */
+article p em {
+  color: #fe8315;
+}
+/* line 184, ../scss/main.scss */
+article p.author {
+  text-align: right;
+  padding-right: 10px;
+}
+/* line 188, ../scss/main.scss */
+article p > span.welcome {
+  font-size: 1.8em;
 }

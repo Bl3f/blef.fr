@@ -1,0 +1,200 @@
+@import "color";
+
+@-webkit-keyframes WheelRotation {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+.bike {
+
+    $radius: 140px;
+    $wheelWidth: 11px;
+    $axeWidth: 9px;
+    $wheelGap: 100px;
+    $height: 100px;
+
+    $tubeWidth: 5px;
+
+    width: 410px;
+    height: 200px;
+    text-align: left;
+    margin: 70px auto 0 auto;
+
+    .back {
+        margin-right: $wheelGap;
+    }
+
+    .tire {
+        display: inline-block;
+        width: $radius;
+        height: $radius;
+        border: 6px solid #353535;
+        border-radius: 50%;
+
+        -webkit-animation-name: WheelRotation;
+        -webkit-animation-duration: 6s;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: ease;
+    }
+
+    .wheel {
+        z-index: 256;
+        width: $radius - 2 * $wheelWidth;
+        height: $radius - 2 * $wheelWidth;
+        border: $wheelWidth solid #EBCAB8;
+        border-radius: 50%;
+    }
+
+    .axe {
+        position: relative;
+        z-index: 64;
+        width: $axeWidth;
+        height: $axeWidth;
+        border: 8px solid #353535;
+        border-radius: 50%;
+        background: #EBCAB8;
+        margin-top: ($radius - 2 * $wheelWidth) / 2 - $axeWidth * 1.5;
+        margin-left: ($radius - 2 * $wheelWidth) / 2 - $axeWidth * 1.5;
+    }
+
+    .radius {
+        li {
+            z-index: 128;
+            position: absolute;
+            list-style: none;
+            width: 1px;
+            height: $radius / 2 - $wheelWidth + 1px;
+            background: #353535;
+            margin-top: -28px;
+            margin-left: 18px;
+            -webkit-transform-origin: 0% 0%;
+        }
+    }
+
+    .tubes {
+        $height: 100px;
+        $backTubes: $radius * 5 / 7;
+
+        @mixin tube($length, $color, $mTop, $mLeft, $rotation) {
+            z-index: 1024;
+            position: absolute;
+            width: $length;
+            height: $tubeWidth;
+            background: $color;
+            margin-top: $mTop;
+            margin-left: $mLeft;
+            -webkit-transform-origin: 0% 0%;
+            -webkit-transform: rotate($rotation);
+            border-radius: 15%;
+        }
+
+        height: $height;
+        .back-chain {
+            @include tube($backTubes, #006C80, $height + $radius / 2 + $tubeWidth / 2, $radius / 2 + $tubeWidth / 2, 10deg);
+        }
+        .back-high {
+            @include tube($backTubes + 19px, #006C80, $height + $radius / 2 + $tubeWidth / 2, $radius / 2 + $tubeWidth / 2, -55deg);
+        }
+        .seat-tube {
+            @include tube($radius * 16 / 14, #006C80, $height + $radius - 45px, $radius + 27px, 257.5deg);
+            height: $tubeWidth + 1px;
+        }
+        .front-chain {
+            @include tube(180px, #006C80, $height + $radius - 49px, $radius + 27px, -39deg);
+            height: $tubeWidth + 1px;
+        }
+        .front-high {
+            @include tube(170px, #006C80, $height - 24px, $radius, -4deg);
+            height: $tubeWidth + 1px;
+        }
+        .fork {
+            @include tube(135px, #006C80, $height + $radius / 2 + 8px, 2.5 * $radius - 21px, 257.5deg);
+            height: $tubeWidth + 1px;
+        }
+    }
+
+    .seat {
+        z-index: 2048;
+        position: absolute;
+        width: 40px;
+        height: 14px;
+        background: #353535;
+        border: 1px solid #353535;
+        border-radius: 35%;
+        margin-top: 38px;
+        margin-left: 121px;
+    }
+
+    .handlebar {
+        .right-part {
+            z-index: 2048;
+            position: absolute;
+            width: 30px;
+            height: 8px;
+            background: #353535;
+            margin-top: 44px;
+            margin-left: 296px;
+        }
+        .curve-part {
+            z-index: 512;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: transparent;
+            margin-top: 44px;
+            margin-left: 306px;
+            border: 8px solid #353535;
+            border-radius: 50%;
+        }
+        .hide-curve {
+            z-index: 640;
+            position: absolute;
+            background: $background-color;
+            border: 0px solid black;
+            width: 45px;
+            height: 40px;
+            margin-top: 44px;
+            margin-left: 279px;
+            -webkit-transform: rotate(-10deg);
+        }
+    }
+
+    li:nth-child(2) {
+        -webkit-transform: rotate(30deg);
+    }
+    li:nth-child(3) {
+        -webkit-transform: rotate(60deg);
+    }
+    li:nth-child(4) {
+        -webkit-transform: rotate(90deg);
+    }
+    li:nth-child(5) {
+        -webkit-transform: rotate(120deg);
+    }
+    li:nth-child(6) {
+        -webkit-transform: rotate(150deg);
+    }
+    li:nth-child(7) {
+        -webkit-transform: rotate(180deg);
+    }
+    li:nth-child(8) {
+        -webkit-transform: rotate(210deg);
+    }
+    li:nth-child(9) {
+        -webkit-transform: rotate(240deg);
+    }
+    li:nth-child(10) {
+        -webkit-transform: rotate(270deg);
+    }
+    li:nth-child(11) {
+        -webkit-transform: rotate(300deg);
+    }
+    li:nth-child(12) {
+        -webkit-transform: rotate(330deg);
+    }
+
+}

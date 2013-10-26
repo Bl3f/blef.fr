@@ -1,10 +1,10 @@
 from django.conf.urls import patterns, url
-from front.views import index, home, contact, resume, portfolio
+from front.views import index, me, contact, resume, portfolio
 
 urlpatterns = patterns('',
-    url(r'^$', index),
-    url(r'^home/$', home),
-    url(r'^contact/$', contact),
-    url(r'^resume/$', resume),
-    url(r'^portfolio/$', portfolio),
+    url(r'^$', index, name="index"),
+    url(r'^me/$', me, name="me"),
+    url(r'^contact/$', contact, name="contact"),
+    url(r'^resume/$', resume, name="resume"),
+    url(r'^portfolio/$', portfolio, name="portfolio"),
 )

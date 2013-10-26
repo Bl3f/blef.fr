@@ -7,28 +7,32 @@ from django.http import HttpResponse, Http404
 import datetime
 
 header_title = 'blef'
+nav_menu = ['me', 'portfolio', 'resume', 'contact']
 
 
 def index(request):
     index_context = {
         'header_title': header_title,
-        'nav_menu': ['home', 'portfolio', 'resume', 'contact'],
+        'nav_menu': nav_menu,
+        'active': 'home',
     }
     return render(request, "front/index.html", index_context)
 
 
-class HomeView(TemplateView):
+class MeView(TemplateView):
 
     def get(self, request, *args, **kwargs):
         context = self.get_context_data(**kwargs)
         context['header_title'] = header_title
+        context['nav_menu'] = nav_menu
+        context['active'] = 'me'
 
         return self.render_to_response(context)
 
-    template_name = "front/home.html"
+    template_name = "front/me.html"
 
-home_index = HomeView.as_view()
-home = home_index
+me_index = MeView.as_view()
+me = me_index
 
 
 class ContactView(TemplateView):
@@ -36,6 +40,8 @@ class ContactView(TemplateView):
     def get(self, request, *args, **kwargs):
         context = self.get_context_data(**kwargs)
         context['header_title'] = header_title
+        context['nav_menu'] = nav_menu
+        context['active'] = 'me'
 
         contact_form = ContactForm()
         context['form'] = contact_form
@@ -53,6 +59,8 @@ class ResumeView(TemplateView):
     def get(self, request, *args, **kwargs):
         context = self.get_context_data(**kwargs)
         context['header_title'] = header_title
+        context['nav_menu'] = nav_menu
+        context['active'] = 'resume'
 
         return self.render_to_response(context)
 
@@ -67,6 +75,8 @@ class PortfolioView(TemplateView):
     def get(self, request, *args, **kwargs):
         context = self.get_context_data(**kwargs)
         context['header_title'] = header_title
+        context['nav_menu'] = nav_menu
+        context['active'] = 'portfolio'
 
         return self.render_to_response(context)
 
