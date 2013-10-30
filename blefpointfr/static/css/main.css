@@ -31,14 +31,13 @@
 /* line 18, ../scss/main.scss */
 body, html {
   margin: 0;
-  height: 100%;
 }
 
-/* line 23, ../scss/main.scss */
+/* line 22, ../scss/main.scss */
 header {
   color: #000;
 }
-/* line 25, ../scss/main.scss */
+/* line 24, ../scss/main.scss */
 header h1 {
   display: inline-block;
   font-family: "coolvetica", "Arial";
@@ -49,18 +48,17 @@ header h1 {
   text-align: left;
 }
 
-/* line 36, ../scss/main.scss */
+/* line 35, ../scss/main.scss */
 a {
   color: black;
   text-decoration: none;
 }
 
-/* line 41, ../scss/main.scss */
+/* line 40, ../scss/main.scss */
 section {
   display: block;
   text-align: center;
   width: 60%;
-  height: 100%;
   min-width: 500px;
   max-width: 850px;
   margin: 0px auto 0px auto;
@@ -69,7 +67,7 @@ section {
   background: white;
 }
 
-/* line 54, ../scss/main.scss */
+/* line 52, ../scss/main.scss */
 nav {
   display: block;
   width: 60%;
@@ -79,11 +77,11 @@ nav {
   padding: 0;
   background: white;
 }
-/* line 63, ../scss/main.scss */
+/* line 61, ../scss/main.scss */
 nav a {
   color: inherit;
 }
-/* line 67, ../scss/main.scss */
+/* line 65, ../scss/main.scss */
 nav ul {
   display: inline-block;
   width: 80%;
@@ -92,11 +90,11 @@ nav ul {
   padding: 0;
   text-align: right;
 }
-/* line 75, ../scss/main.scss */
+/* line 73, ../scss/main.scss */
 nav ul a {
   display: inline-block;
 }
-/* line 77, ../scss/main.scss */
+/* line 75, ../scss/main.scss */
 nav ul a li {
   font-family: "coolvetica", "Arial";
   font-size: 2em;
@@ -105,24 +103,24 @@ nav ul a li {
   height: 30px;
   margin: 0px;
 }
-/* line 88, ../scss/main.scss */
+/* line 86, ../scss/main.scss */
 nav ul a:hover > .nav1 {
   color: #006c80;
 }
-/* line 91, ../scss/main.scss */
+/* line 89, ../scss/main.scss */
 nav ul a:hover > .nav2 {
   color: #ebcab8;
 }
-/* line 94, ../scss/main.scss */
+/* line 92, ../scss/main.scss */
 nav ul a:hover > .nav3 {
   color: #fe8315;
 }
-/* line 97, ../scss/main.scss */
+/* line 95, ../scss/main.scss */
 nav ul a:hover > .nav4 {
   color: #fa3113;
 }
 
-/* line 104, ../scss/main.scss */
+/* line 102, ../scss/main.scss */
 footer {
   position: fixed;
   width: 100px;
@@ -130,18 +128,18 @@ footer {
   left: 150px;
   top: 210px;
 }
-/* line 110, ../scss/main.scss */
+/* line 108, ../scss/main.scss */
 footer li {
   text-align: center;
   list-style: none;
 }
-/* line 113, ../scss/main.scss */
+/* line 111, ../scss/main.scss */
 footer li a {
   display: inline-block;
   width: 50px;
   height: 50px;
 }
-/* line 117, ../scss/main.scss */
+/* line 115, ../scss/main.scss */
 footer li a img {
   opacity: 0.2;
   -webkit-filter: grayscale(1);
@@ -155,7 +153,7 @@ footer li a img {
   -o-transition: opacity 1s ease;
   transition: opacity 1s ease;
 }
-/* line 130, ../scss/main.scss */
+/* line 128, ../scss/main.scss */
 footer li a img:hover {
   opacity: 1;
   -webkit-filter: grayscale(0);
@@ -165,7 +163,7 @@ footer li a img:hover {
   filter: grayscale(0);
 }
 
-/* line 143, ../scss/main.scss */
+/* line 141, ../scss/main.scss */
 .single_page {
   display: block;
   height: 10px;
@@ -177,45 +175,99 @@ footer li a img:hover {
   position: absolute;
 }
 
-/* line 154, ../scss/main.scss */
+/* line 152, ../scss/main.scss */
 .homepage {
   display: inline-block;
   width: 25%;
-  height: 10px;
+  height: 20px;
   margin: 0px -4px 0 0;
-  top: -4px;
+  top: -10px;
   position: relative;
+  transition: top 0.5s ease 0s;
 }
 
-/* line 164, ../scss/main.scss */
+/* line 163, ../scss/main.scss */
 .home img {
   text-align: left;
 }
 
-/* line 169, ../scss/main.scss */
+/* line 168, ../scss/main.scss */
 article {
   min-width: 500px;
   max-width: 850px;
   margin: 0px auto 0px auto;
-}
-/* line 174, ../scss/main.scss */
-article p {
-  margin-left: 50px;
   font-family: "coolvetica", "Arial";
   text-align: left;
   color: #006c80;
-  font-size: 1.2em;
 }
-/* line 181, ../scss/main.scss */
-article p em {
-  color: #fe8315;
+/* line 176, ../scss/main.scss */
+article .blef-bubble {
+  width: 150px;
+  display: block;
+  float: right;
+  margin-top: 20px;
+  margin-right: 20px;
 }
 /* line 184, ../scss/main.scss */
-article p.author {
+article > ul, article p {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 0px;
+  font-size: 1.2em;
+  list-style: none;
+  padding: 0;
+  text-align: justify;
+}
+/* line 194, ../scss/main.scss */
+article em {
+  color: #fe8315;
+}
+/* line 197, ../scss/main.scss */
+article .author {
   text-align: right;
   padding-right: 10px;
 }
-/* line 188, ../scss/main.scss */
-article p > span.welcome {
+/* line 201, ../scss/main.scss */
+article h2 {
+  margin-left: 50px;
+  margin-bottom: 0px;
   font-size: 1.8em;
+}
+/* line 207, ../scss/main.scss */
+article#portfolio hr {
+  border-style: initial;
+  border-bottom: 1px solid #ebcab8;
+  margin: 30px 50px 30px 50px;
+}
+/* line 212, ../scss/main.scss */
+article#portfolio section {
+  width: 100%;
+}
+/* line 214, ../scss/main.scss */
+article#portfolio section div.overview {
+  min-height: 250px;
+}
+/* line 216, ../scss/main.scss */
+article#portfolio section div.overview img {
+  display: inline-block;
+  width: 400px;
+  vertical-align: top;
+}
+/* line 221, ../scss/main.scss */
+article#portfolio section div.overview .description {
+  text-align: justify;
+  display: inline-block;
+  width: 46%;
+  padding: 0px 20px;
+}
+/* line 226, ../scss/main.scss */
+article#portfolio section div.overview .description h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 1.5em;
+}
+/* line 231, ../scss/main.scss */
+article#portfolio section div.overview .description p {
+  margin: 0px;
+  font-size: 0.9em;
 }

@@ -1,27 +1,13 @@
 jQuery(function() {
     "use strict";
 
-    $('nav ul a').on('click', function(event) {
-//        event.preventDefault();
-//        event.stopPropagation();
-//        var clicked = $(this);
-//
-//
-//        clicked.animate({
-//            position: "absolute",
-//            top: "0"
-//        })
-//        $('nav ul a').each(function() {
-//            if($(this).attr('id') != clicked.attr('id')) {
-//                $(this).animate({
-//                    marginLeft: "1000"
-//                },{
-//                    duration: 500,
-//                    complete: function() {
-//                        $(this).hide();
-//                    }
-//                });
-//            }
-//        });
+    $('nav ul a li').on('mouseenter', function(event) {
+        var color =  $(this).attr('class');
+
+        $('.single_page .' + color).css('top', '0px');
+    }).on('mouseleave', function(event) {
+        var color =  $(this).attr('class');
+
+        $('.single_page .' + color).css('top', '-10px');
     });
 });

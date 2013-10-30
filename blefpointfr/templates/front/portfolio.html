@@ -7,4 +7,64 @@
 {% block header_title %}{{ header_title }}{% endblock %}
 
 {% block content %}
+    <article id="portfolio">
+        <p>I'm <em>your</em> frontend, backend and desktop developer. I'm in love with <em>Python</em> and sometimes I
+            cheat on him with <em>PHP</em>, but <em>Django</em> watch on me. I'm good with <em>simple</em> interface and
+            to deal with UX. Below you can see what I have already done.
+        </p>
+        <section>
+            <div class="overview">
+                <hr>
+                <img src="{{ STATIC_URL }}images/wis1.png">
+
+                <div class="description">
+                    <h3>WIS</h3>
+
+                    <p>WIS is a mysterious tool. WIS allow people to share pictures around the web easily by offering a
+                        simple register process and an pure interface. But the concept of WIS doesn't lie in a simple
+                        sharing, WIS is also a open-source app for Django developers who are looking for an gallery
+                        application. Moreover the gallery view of WIS is unique! For this tool I have worked in
+                        collaboration with <a href="">Franck</a> and it was a great experience. We want to improve WIS
+                        in the future to allow users to choose their own storage.
+                    </p>
+                    <a href="">http://www.wis.fr</a>
+
+                    <div class="stack">Stack : Javascript - Django - SASS</div>
+                </div>
+            </div>
+            <div class="overview">
+                <hr>
+                <div class="description">
+                    <h3>tdlst</h3>
+
+                    <p>When you are a developer you are continuously looking for an idea. But sometimes a simple thing
+                        can give an idea. A day I needed a todolist but I don't find a web hosted todolist fitted for
+                        me. So I decided to implements mine, and tdlst was born. With tdlst you can share tdlst with
+                        your friends, your friends can subscribe to your tdlst and never forget something. And remember,
+                        don't forget the vowel.
+                    </p>
+                    <a href="">http://www.tdlst.fr</a>
+
+                    <div class="stack">Stack : Websockets - Coffeescript - Django - SASS</div>
+                </div>
+                <img src="{{ STATIC_URL }}images/tdlst1.png">
+            </div>
+            <div class="overview">
+                <hr>
+                <img src="{{ STATIC_URL }}images/tnservices1.png">
+
+                <div class="description">
+                    <h3>TN Services - Web design</h3>
+
+                    <p>When I was at TELECOM Nancy Services the junior enterprise like of my school I was responsible
+                        for graphic works and I redesign the website to give an new identity to the association after
+                        the name changes.
+                    </p>
+                    <a href="">http://www.tnservices.fr</a>
+
+                    <div class="stack">Stack : Photoshop</div>
+                </div>
+            </div>
+        </section>
+    </article>
 {% endblock %}

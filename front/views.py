@@ -19,12 +19,19 @@ def index(request):
     return render(request, "front/index.html", index_context)
 
 
-class MeView(TemplateView):
+class BlefView(TemplateView):
+
+    def get_context_data(self, **kwargs):
+        context = super(BlefView, self).get_context_data()
+        context['header_title'] = header_title
+        context['nav_menu'] = nav_menu
+        return context
+
+
+class MeView(BlefView):
 
     def get(self, request, *args, **kwargs):
         context = self.get_context_data(**kwargs)
-        context['header_title'] = header_title
-        context['nav_menu'] = nav_menu
         context['active'] = 'me'
 
         return self.render_to_response(context)
@@ -35,13 +42,20 @@ me_index = MeView.as_view()
 me = me_index
 
 
-class ContactView(TemplateView):
+class ContactView(BlefView):
 
     def get(self, request, *args, **kwargs):
         context = self.get_context_data(**kwargs)
-        context['header_title'] = header_title
-        context['nav_menu'] = nav_menu
-        context['active'] = 'me'
+        context['active'] = 'contact'
+
+        contact_form = ContactForm()
+        context['form'] = contact_form
+
+        return self.render_to_response(context)
+
+    def post(self, request, *args, **kwargs):
+        context = self.get_context_data(**kwargs)
+        context['active'] = 'contact'
 
         contact_form = ContactForm()
         context['form'] = contact_form
@@ -54,12 +68,10 @@ contact_index = ContactView.as_view()
 contact = contact_index
 
 
-class ResumeView(TemplateView):
+class ResumeView(BlefView):
 
     def get(self, request, *args, **kwargs):
         context = self.get_context_data(**kwargs)
-        context['header_title'] = header_title
-        context['nav_menu'] = nav_menu
         context['active'] = 'resume'
 
         return self.render_to_response(context)
@@ -70,12 +82,10 @@ resume_index = ResumeView.as_view()
 resume = resume_index
 
 
-class PortfolioView(TemplateView):
+class PortfolioView(BlefView):
 
     def get(self, request, *args, **kwargs):
         context = self.get_context_data(**kwargs)
-        context['header_title'] = header_title
-        context['nav_menu'] = nav_menu
         context['active'] = 'portfolio'
 
         return self.render_to_response(context)

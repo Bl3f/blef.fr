@@ -1,7 +1,7 @@
 @import "color";
 
 .single_page.nav1, .homepage.nav1 {background: $home-color;}
-.single_page.nav2, .homepage.nav2 {background: $experience-color;}
+.single_page.nav2, .homepage.nav2 {background: $portfolio-color;}
 .single_page.nav3, .homepage.nav3 {background: $resume-color;}
 .single_page.nav4, .homepage.nav4 {background: $contact-color;}
 
@@ -17,7 +17,6 @@
 
 body, html {
     margin: 0;
-    height: 100%;
 }
 
 header {
@@ -42,7 +41,6 @@ section {
     display: block;
     text-align: center;
     width: 60%;
-    height: 100%;
     min-width: 500px;
     max-width: 850px;
     margin: 0px auto 0px auto;
@@ -89,7 +87,7 @@ nav {
                 color: $home-color;
             }
             &> .nav2 {
-                color: $experience-color;
+                color: $portfolio-color;
             }
             &> .nav3 {
                 color: $resume-color;
@@ -154,10 +152,11 @@ footer {
 .homepage {
     display: inline-block;
     width: 25%;
-    height: 10px;
+    height: 20px;
     margin: 0px -4px 0 0;
-    top: -4px;
+    top: -10px;
     position: relative;
+    transition: top 0.5s ease 0s;
 }
 
 .home {
@@ -170,23 +169,71 @@ article {
     min-width: 500px;
     max-width: 850px;
     margin: 0px auto 0px auto;
+    font-family: "coolvetica", "Arial";
+    text-align: left;
+    color: $home-color;
 
-    p {
+    .blef-bubble {
+        width: 150px;
+        display: block;
+        float: right;
+        margin-top: 20px;
+        margin-right: 20px;
+    }
+
+    &>ul, p {
         margin-left: 50px;
-        font-family: "coolvetica", "Arial";
-        text-align: left;
-        color: $home-color;
+        margin-right: 50px;
+        margin-top: 0px;
         font-size: 1.2em;
+        list-style: none;
+        padding: 0;
+        text-align: justify;
+    }
 
-        em {
-            color: $resume-color;
+    em {
+        color: $resume-color;
+    }
+    .author {
+        text-align: right;
+        padding-right: 10px;
+    }
+    h2 {
+        margin-left: 50px;
+        margin-bottom: 0px;
+        font-size: 1.8em;
+    }
+    &#portfolio {
+        hr {
+            border-style: initial;
+            border-bottom: 1px solid $portfolio-color;
+            margin: 30px 50px 30px 50px;
         }
-        &.author {
-            text-align: right;
-            padding-right: 10px;
-        }
-        & > span.welcome {
-            font-size: 1.8em;
+        section {
+            width: 100%;
+            div.overview {
+                min-height: 250px;
+                img {
+                    display: inline-block;
+                    width: 400px;
+                    vertical-align: top;
+                }
+                .description {
+                    text-align: justify;
+                    display: inline-block;
+                    width: 46%;
+                    padding: 0px 20px;
+                    h3 {
+                        margin-top: 0px;
+                        margin-bottom: 0px;
+                        font-size: 1.5em;
+                    }
+                    p {
+                        margin: 0px;
+                        font-size: 0.9em;
+                    }
+                }
+            }
         }
     }
 }
