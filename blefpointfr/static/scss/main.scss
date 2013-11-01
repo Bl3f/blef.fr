@@ -236,4 +236,57 @@ article {
             }
         }
     }
+    form {
+        margin-top: 30px;
+        label {
+            width: 30%;
+            display: inline-block;
+            text-align: right;
+            vertical-align: middle;
+            float: left;
+        }
+        input[type="text"], textarea {
+            width: 60%;
+            height: 20px;
+            margin-left: 30px;
+            padding: 6px 12px;
+            font-size: 14px;
+            line-height: 1.428571429;
+            color: #555;
+            vertical-align: middle;
+            background-color: $background-color;
+            background-image: none;
+            border: 1px solid #ccc;
+        }
+        textarea {
+            width: 60%;
+            height: 60px;
+            resize: vertical;
+        }
+        input[type="submit"] {
+            background-color: $contact-color;
+            border-color: $contact-color;
+            float: right;
+            color: $background-color;
+            text-transform: uppercase;
+            font-family: "coolvetica";
+            display: inline-block;
+            padding: 6px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: normal;
+            line-height: 1.428571429;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            cursor: pointer;
+            background-image: none;
+            border: 1px solid transparent;
+
+            &:active {
+                color: #000000;
+                margin-top: 5px;
+            }
+        }
+    }
 }

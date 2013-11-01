@@ -7,15 +7,18 @@
 {% endblock %}
 
 {% block content %}
-    {% if form.errors %}
-        <p style="color: red;">
-            Please correct the error{{ form.errors|pluralize }} below.
-        </p>
-    {% endif %}
+    <article>
+        <p>Feel free to contact me for any reason</p>
+        {% if form.errors %}
+            <p style="color: red;">
+                Please correct the error{{ form.errors|pluralize }} below.
+            </p>
+        {% endif %}
 
-    <form action="" method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Contact me !">
-    </form>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Contact me !">
+        </form>
+    </article>
 {% endblock %}

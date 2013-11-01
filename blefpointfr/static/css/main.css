@@ -271,3 +271,61 @@ article#portfolio section div.overview .description p {
   margin: 0px;
   font-size: 0.9em;
 }
+/* line 239, ../scss/main.scss */
+article form {
+  margin-top: 30px;
+}
+/* line 241, ../scss/main.scss */
+article form label {
+  width: 30%;
+  display: inline-block;
+  text-align: right;
+  vertical-align: middle;
+  float: left;
+}
+/* line 248, ../scss/main.scss */
+article form input[type="text"], article form textarea {
+  width: 60%;
+  height: 20px;
+  margin-left: 30px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.428571429;
+  color: #555;
+  vertical-align: middle;
+  background-color: white;
+  background-image: none;
+  border: 1px solid #ccc;
+}
+/* line 261, ../scss/main.scss */
+article form textarea {
+  width: 60%;
+  height: 60px;
+  resize: vertical;
+}
+/* line 266, ../scss/main.scss */
+article form input[type="submit"] {
+  background-color: #fa3113;
+  border-color: #fa3113;
+  float: right;
+  color: white;
+  text-transform: uppercase;
+  font-family: "coolvetica";
+  display: inline-block;
+  padding: 6px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.428571429;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+}
+/* line 286, ../scss/main.scss */
+article form input[type="submit"]:active {
+  color: #000000;
+  margin-top: 5px;
+}
