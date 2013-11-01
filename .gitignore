@@ -1,4 +1,5 @@
 .idea
 *.pyc
-blefpointfr/settings.py
+blefpointfr/static/css
 .sass-cache
+/static/

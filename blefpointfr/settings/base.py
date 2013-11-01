@@ -1,6 +1,9 @@
 # Django settings for blefpointfr project.
 import os.path
 
+PROJECT_ROOT = os.path.realpath(os.path.dirname(__file__) + '/../..')
+
+print PROJECT_ROOT
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -63,7 +66,7 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = ''
+STATIC_ROOT = '{project_root}/static/'.format(project_root=PROJECT_ROOT)
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
@@ -71,7 +74,7 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    os.path.join(os.path.dirname(__file__), 'static').replace('\\', '/'),
+    os.path.join(PROJECT_ROOT, 'blefpointfr', 'static'),
 )
 
 # List of finder classes that know how to find static files in
@@ -108,7 +111,7 @@ ROOT_URLCONF = 'blefpointfr.urls'
 WSGI_APPLICATION = 'blefpointfr.wsgi.application'
 
 TEMPLATE_DIRS = (
-    os.path.join(os.path.dirname(__file__), 'templates').replace('\\', '/'),
+    os.path.join(os.path.dirname(__file__), '../templates').replace('\\', '/'),
 )
 
 INSTALLED_APPS = (
@@ -118,6 +121,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'front',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
