@@ -1,10 +1,8 @@
-from django.template.loader import get_template
-from django.template import Context
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
+from django.core.mail import send_mail
 from front.forms import ContactForm
-from django.http import HttpResponse, Http404
-import datetime
+from blefpointfr.settings.base import ADMINS
 
 header_title = 'blef'
 nav_menu = ['me', 'portfolio', 'resume', 'contact']
@@ -56,9 +54,19 @@ class ContactView(BlefView):
     def post(self, request, *args, **kwargs):
         context = self.get_context_data(**kwargs)
         context['active'] = 'contact'
+        recipients = [mail for name, mail in ADMINS]
 
-        contact_form = ContactForm()
-        context['form'] = contact_form
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            subject = form.cleaned_data['subject']
+            email = form.cleaned_data['email']
+            message = form.cleaned_data['message']
+
+            send_mail(subject, message, email, recipients)
+
+        else:
+            contact_form = ContactForm(request.POST)
+            context['form'] = contact_form
 
         return self.render_to_response(context)
 

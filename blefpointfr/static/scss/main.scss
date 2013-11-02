@@ -288,5 +288,36 @@ article {
                 margin-top: 5px;
             }
         }
+        input:focus, textarea:focus {
+            outline:  none;
+            border: 1px solid $contact-color;
+            -webkit-transition: border 0.7s ease;
+               -moz-transition: border 0.7s ease;
+                -ms-transition: border 0.7s ease;
+                 -o-transition: border 0.7s ease;
+                    transition: border 0.7s ease;
+        }
+        .errors {
+            color: #000000;
+            background: red;
+            margin: 0px 0px 50px 0px;
+            padding: 10px 10px 10px 30px;
+        }
+        ul.errorlist {
+            list-style: none;
+            text-align: center;
+            font-size: 0.8em;
+        }
+        ul.errorlist + p input, ul.errorlist + p textarea {
+            border: 1px solid black;
+            &:focus {
+                border: 1px solid $contact-color;
+                -webkit-transition: border 0.7s ease;
+                   -moz-transition: border 0.7s ease;
+                    -ms-transition: border 0.7s ease;
+                     -o-transition: border 0.7s ease;
+                        transition: border 0.7s ease;
+            }
+        }
     }
 }

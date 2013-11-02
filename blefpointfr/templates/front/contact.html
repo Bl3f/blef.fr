@@ -9,13 +9,12 @@
 {% block content %}
     <article>
         <p>Feel free to contact me for any reason</p>
-        {% if form.errors %}
-            <p style="color: red;">
-                Please correct the error{{ form.errors|pluralize }} below.
-            </p>
-        {% endif %}
-
         <form action="" method="post">
+            {% if form.errors %}
+                <p class="errors">
+                    Please correct the error{{ form.errors|pluralize }} below.
+                </p>
+            {% endif %}
             {% csrf_token %}
             {{ form.as_p }}
             <input type="submit" value="Contact me !">
