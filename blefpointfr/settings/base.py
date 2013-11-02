@@ -3,8 +3,6 @@ import os.path
 
 PROJECT_ROOT = os.path.realpath(os.path.dirname(__file__) + '/../..')
 
-print PROJECT_ROOT
-
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
