@@ -1,0 +1,71 @@
+@import "color";
+
+.single_page.nav1, .homepage.nav1 {background: $home-color;}
+.single_page.nav2, .homepage.nav2 {background: $portfolio-color;}
+.single_page.nav3, .homepage.nav3 {background: $resume-color;}
+.single_page.nav4, .homepage.nav4 {background: $contact-color;}
+
+@font-face {
+    font-family: "coolvetica";
+    src: url('../fonts/coolvetica.ttf');
+}
+
+@font-face {
+    font-family: "KyrillaSansSerif";
+    src: url('../fonts/KyrillaSansSerif.ttf');
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    color: #000;
+    h1 {
+        display: inline-block;
+        font-family: "coolvetica", "Arial";
+        font-size: 6em;
+        font-weight: 100;
+        width: 19%;
+        margin: 0;
+        text-align: left;
+    }
+}
+
+.homepage {
+    display: inline-block;
+    width: 25%;
+    height: 20px;
+    top: -10px;
+    position: relative;
+    transition: top 0.5s ease 0s;
+}
+
+.single_page {
+    display: block;
+    height: 10px;
+    width: 100%;
+    position: absolute;
+}
+
+article {
+    color: $home-color;
+    font-family: "coolvetica", "Arial";
+    em {
+        color: $resume-color;
+    }
+    .author {
+        text-align: right;
+        padding-right: 10px;
+    }
+}

@@ -1,0 +1,207 @@
+@import "common";
+
+.bike {
+    display: none;
+}
+
+section {
+    width: 100%;
+}
+
+nav {
+    width: 100%;
+    display: block;
+}
+
+header {
+    display: block;
+    min-height: 220px;
+    text-align: right;
+    padding-top: 50px;
+    clear: both;
+    h1 {
+        margin-top: -60px;
+        font-size: 12em;
+        display: inline-block;
+        float: left;
+        vertical-align: bottom;
+        line-height: 1.33em;
+        margin-left: 20px;
+    }
+    ul {
+        text-align: right;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+        max-width: 560px;
+        margin-right: 20px;
+        margin-top: 15px;
+        float: right;
+        vertical-align: bottom;
+        a {
+            display: inline-block;
+            width: 49%;
+            min-width: 270px;
+            li {
+                display: inline-block;
+                font-family: "coolvetica", "Arial";
+                text-transform: uppercase;
+                font-size: 3.3em;
+            }
+        }
+    }
+}
+
+.homepage {
+    top: -10px;
+    height: 40px;
+}
+
+.single_page {
+    top: 0px;
+    width: 100%;
+    height: 30px;
+}
+
+#home {
+    display: none;
+}
+
+article {
+    border-top: 2px solid $portfolio-color;
+    border-bottom: 2px solid $portfolio-color;
+    ul {
+        padding: 0;
+    }
+    h2 {
+        margin-top: 0px;
+    }
+    padding: 40px 40px 40px 40px;
+    font-size: 5vw;
+    text-align: justify;
+    font-family: "coolvetica", "Arial";
+    line-height: 1.4em;
+    .blef-bubble {
+        display: block;
+        width: 40%;
+        margin: 0 auto 40px auto;
+    }
+    .overview {
+        img {
+            display: block;
+            width: 90%;
+            margin: 30px auto;
+        }
+    }
+    hr {
+        display: block;
+        margin: 80px 0px 40px 0px;
+        padding: 0;
+        border: none;
+        border-top: medium double $portfolio-color;
+        color: $portfolio-color;
+        text-align: center;
+        &:after {
+            content: "\2724";
+            display: inline-block;
+            position: relative;
+            top: -0.7em;
+            font-size: 1.5em;
+            padding: 0 0.25em;
+            background: white;
+        }
+    }
+}
+
+footer {
+    padding: 30px 0 30px 0;
+    text-align: center;
+    li {
+        display: inline-block;
+        max-width: 80px;
+        min-width: 30px;
+        margin: 0 40px 0 40px;
+        img {
+            width: 100%;
+            -webkit-filter: grayscale(1);
+               -moz-filter: grayscale(1);
+                -ms-filter: grayscale(1);
+                 -o-filter: grayscale(1);
+                    filter: grayscale(1);
+        }
+    }
+}
+
+form {
+    input, textarea {
+        margin: 20px 0;
+        font-size: 4vw;
+        display: block;
+        width: 100%;
+        height: 50px;
+        line-height: 1.428571429;
+        color: #555;
+        vertical-align: middle;
+        background-color: $background-color;
+        background-image: none;
+        border: 4px solid #ccc;
+    }
+    textarea {
+        height: 200px;
+    }
+    input:focus, textarea:focus {
+        outline:  none;
+        border: 4px solid $contact-color;
+        -webkit-transition: border 0.7s ease;
+           -moz-transition: border 0.7s ease;
+            -ms-transition: border 0.7s ease;
+             -o-transition: border 0.7s ease;
+                transition: border 0.7s ease;
+    }
+    input[type="submit"] {
+        background-color: $contact-color;
+        border-color: $contact-color;
+        color: $background-color;
+        text-transform: uppercase;
+        font-family: "coolvetica";
+        display: inline-block;
+        padding: 6px 12px;
+        margin-bottom: 0;
+        font-size: 5vw;
+        font-weight: normal;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        cursor: pointer;
+        background-image: none;
+        border: 1px solid transparent;
+        height: 100px;
+
+        &:active {
+            color: #000000;
+            margin-top: 5px;
+        }
+    }
+    .errors {
+        color: #000000;
+        background: red;
+        margin: 0px 0px 50px 0px;
+        padding: 10px 10px 10px 30px;
+    }
+    ul.errorlist {
+        list-style: none;
+        text-align: center;
+        font-size: 0.8em;
+    }
+    ul.errorlist + p input, ul.errorlist + p textarea {
+        border: 4px solid red;
+        &:focus {
+            border: 4px solid $contact-color;
+            -webkit-transition: border 0.7s ease;
+               -moz-transition: border 0.7s ease;
+                -ms-transition: border 0.7s ease;
+                 -o-transition: border 0.7s ease;
+                    transition: border 0.7s ease;
+        }
+    }
+}

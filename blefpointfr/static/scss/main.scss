@@ -1,48 +1,9 @@
-@import "color";
-
-.single_page.nav1, .homepage.nav1 {background: $home-color;}
-.single_page.nav2, .homepage.nav2 {background: $portfolio-color;}
-.single_page.nav3, .homepage.nav3 {background: $resume-color;}
-.single_page.nav4, .homepage.nav4 {background: $contact-color;}
-
-@font-face {
-    font-family: "coolvetica";
-    src: url('../fonts/coolvetica.ttf');
-}
-
-@font-face {
-    font-family: "KyrillaSansSerif";
-    src: url('../fonts/KyrillaSansSerif.ttf');
-}
-
-body, html {
-    margin: 0;
-}
-
-header {
-    color: #000;
-    h1 {
-        display: inline-block;
-        font-family: "coolvetica", "Arial";
-        font-size: 6em;
-        font-weight: 100;
-        width: 19%;
-        margin: 0;
-        text-align: left;
-    }
-}
-
-a {
-    color: black;
-    text-decoration: none;
-}
+@import "common";
 
 section {
     display: block;
     text-align: center;
-    width: 60%;
-    min-width: 500px;
-    max-width: 850px;
+    width: 850px;
     margin: 0px auto 0px auto;
     padding: 1px 0 10px 0;
     min-height: 320px;
@@ -51,7 +12,7 @@ section {
 
 nav {
     display: block;
-    width: 60%;
+    width: 850px;
     min-width: 500px;
     max-width: 850px;
     margin: 0px auto 0px auto;
@@ -79,6 +40,7 @@ nav {
                 text-align: right;
                 height: 30px;
                 margin: 0px;
+                padding: 0px 3px 0px 3px;
             }
         }
 
@@ -99,20 +61,25 @@ nav {
     }
 }
 
+.single_page {
+    width: 850px;
+}
+
 footer {
     position: fixed;
     width: 100px;
     height: 200px;
-    left: 150px;
+    left: 0%;
     top: 210px;
     li {
         text-align: center;
         list-style: none;
         a {
             display: inline-block;
-            width: 50px;
+            width: 30px;
             height: 50px;
             img {
+                width: 30px;
                 opacity: 0.2;
                 -webkit-filter: grayscale(1);
                 -moz-filter: grayscale(1);
@@ -138,40 +105,15 @@ footer {
     }
 }
 
-.single_page {
-    display: block;
-    height: 10px;
-    top: 0;
-    width: 60%;
-    min-width: 500px;
-    max-width: 850px;
-    margin: 0px auto 0px auto;
-    position: absolute;
-}
-
-.homepage {
-    display: inline-block;
-    width: 25%;
-    height: 20px;
-    margin: 0px -4px 0 0;
-    top: -10px;
-    position: relative;
-    transition: top 0.5s ease 0s;
-}
-
-.home {
-    img {
-        text-align: left;
-    }
+#home {
+    font-size: 0.7em;
 }
 
 article {
     min-width: 500px;
     max-width: 850px;
     margin: 0px auto 0px auto;
-    font-family: "coolvetica", "Arial";
     text-align: left;
-    color: $home-color;
 
     .blef-bubble {
         width: 150px;
@@ -189,14 +131,6 @@ article {
         list-style: none;
         padding: 0;
         text-align: justify;
-    }
-
-    em {
-        color: $resume-color;
-    }
-    .author {
-        text-align: right;
-        padding-right: 10px;
     }
     h2 {
         margin-left: 50px;
