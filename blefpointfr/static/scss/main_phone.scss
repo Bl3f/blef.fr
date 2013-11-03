@@ -27,6 +27,7 @@ header {
         vertical-align: bottom;
         line-height: 1.33em;
         margin-left: 20px;
+        width: 220px;
     }
     ul {
         text-align: right;
@@ -72,6 +73,9 @@ article {
     border-bottom: 2px solid $portfolio-color;
     ul {
         padding: 0;
+        li {
+            margin-bottom: 40px;
+        }
     }
     h2 {
         margin-top: 0px;
@@ -79,8 +83,7 @@ article {
     padding: 40px 40px 40px 40px;
     font-size: 5vw;
     text-align: justify;
-    font-family: "coolvetica", "Arial";
-    line-height: 1.4em;
+    line-height: 1.3em;
     .blef-bubble {
         display: block;
         width: 40%;
@@ -118,9 +121,9 @@ footer {
     text-align: center;
     li {
         display: inline-block;
-        max-width: 80px;
+        max-width: 10%;
         min-width: 30px;
-        margin: 0 40px 0 40px;
+        margin: 0 40px 0px 40px;
         img {
             width: 100%;
             -webkit-filter: grayscale(1);
@@ -202,6 +205,29 @@ form {
                 -ms-transition: border 0.7s ease;
                  -o-transition: border 0.7s ease;
                     transition: border 0.7s ease;
+        }
+    }
+}
+
+@media screen and (max-width: 820px) {
+    header {
+        font-size: 0.6em;
+        min-height: 130px;
+        h1 {
+            margin-top: -40px;
+            width: 170px;
+        }
+        ul {
+            display: inline-block;
+            float: none;
+            width: 350px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            a {
+                display: inline-block;
+                min-width: 170px;
+                width: 170px;
+            }
         }
     }
 }

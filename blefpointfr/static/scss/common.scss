@@ -15,6 +15,9 @@
     src: url('../fonts/KyrillaSansSerif.ttf');
 }
 
+@font-face{font-family:'Glyphicons Halflings';src:url('../fonts/glyphicons-halflings-regular.eot');src:url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),url('../fonts/glyphicons-halflings-regular.woff') format('woff'),url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'),url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');}
+.glyphicon{position:relative;top:1px;display:inline-block;font-family:'Glyphicons Halflings';font-style:normal;font-weight:normal;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+
 body, html {
     margin: 0;
     padding: 0;
@@ -60,12 +63,28 @@ header {
 
 article {
     color: $home-color;
-    font-family: "coolvetica", "Arial";
+    font-family: "Arial";
     em {
         color: $resume-color;
     }
     .author {
         text-align: right;
         padding-right: 10px;
+    }
+    a {
+        color: $contact-color;
+        &:before {
+            @extend .glyphicon;
+            font-size: 0.6em;
+            margin-right: 3px;
+            content:"\e144";
+        }
+        &:hover {
+            &:before {
+                font-size: 0.6em;
+                top: -1px;
+                color: black;
+            }
+        }
     }
 }
