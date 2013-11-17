@@ -17,6 +17,12 @@ def index(request):
     return render(request, "front/index.html", index_context)
 
 
+def workip(request):
+    context = []
+
+    return render(request, "front/workip.html", context)
+
+
 class BlefView(TemplateView):
 
     def get_context_data(self, **kwargs):

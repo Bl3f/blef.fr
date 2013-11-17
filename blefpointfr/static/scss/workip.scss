@@ -1,0 +1,115 @@
+@import "fonts";
+
+body {
+    background: #5C4B51;
+    color: #F2EBBF;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: #A5C88F;
+    text-decoration: none;
+    font-weight: 500;
+    &.text-link:before {
+        @extend .glyphicon;
+        font-size: 0.6em;
+        margin-right: 3px;
+        content:"\e144";
+    }
+    &.text-link:hover {
+        &:before {
+            font-size: 0.6em;
+            top: -1px;
+            color: #EF847B;
+        }
+    }
+}
+
+.workip {
+    width: 950px;
+    margin: 200px auto;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 4em;
+    margin-bottom: 30px;
+}
+
+p {
+    font-weight: 300;
+    font-size: 1.2em;
+}
+
+ul {
+    margin-top: 40px;
+    padding: 0;
+    list-style: none;
+    li {
+        display: inline-block;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    body {
+        padding: 10px;
+    }
+    .workip {
+        width: 100%;
+        margin: 0;
+        font-size: 0.9em;
+        text-align: justify;
+    }
+    footer {
+        text-align: center;
+    }
+    a.text-link:before {
+        @extend .glyphicon;
+        font-size: 0.6em;
+        margin-right: 3px;
+        content:"";
+    }
+}
+
+
+/* CSS sprite icons */
+.icon {
+    background-image: url("../images/icon-sprite.png");
+    background-repeat: no-repeat;
+    display: block;
+    opacity: 0.8;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.icon-facebook {
+    width: 32px;
+    height: 32px;
+    background-position: -5px -5px;
+}
+
+.icon-github {
+    width: 32px;
+    height: 32px;
+    background-position: -47px -5px;
+}
+
+.icon-linkedin {
+    width: 32px;
+    height: 32px;
+    background-position: -5px -47px;
+}
+
+.icon-skype {
+    width: 32px;
+    height: 32px;
+    background-position: -47px -47px;
+}
+
+.icon-twitter {
+    width: 32px;
+    height: 32px;
+    background-position: -89px -5px;
+}
+
