@@ -27,7 +27,7 @@ a {
 
 .workip {
     width: 950px;
-    margin: 200px auto;
+    margin: 150px auto;
 }
 
 h1 {
@@ -36,10 +36,91 @@ h1 {
     margin-bottom: 30px;
 }
 
+.title {
+    position: absolute;
+    color: #EF847B;
+    top: 0px;
+    font-size: 7.5em;
+    font-family: 'Shadows Into Light', cursive;
+}
+
 p {
     font-weight: 300;
     font-size: 1.2em;
 }
+
+.item {
+    .subtitle {
+        font-size: 1.5em;
+        border-bottom: 1px solid;
+        &:before {
+            @extend .glyphicon;
+            content:"\e080";
+            font-size: 0.6em;
+            margin-right: 10px;
+            line-height: 40px;
+            top: -2px;
+        }
+        a {
+            color: inherit;
+        }
+    }
+    .tags {
+        display: inline-block;
+        width: 29%;
+        ul {
+            margin-top: 10px;
+            padding-left: 50px;
+            li {
+                width: 100%;
+                margin-top: 8px;
+                font-family: 'Shadows Into Light', cursive;
+                font-size: 1.6em;
+                color: #8CBEB2;
+            }
+        }
+    }
+    .description {
+        display: inline-block;
+        width: 70%;
+        vertical-align: top;
+        p {
+            padding-right: 50px;
+            text-align: justify;
+        }
+    }
+    .stack {
+        color: #A5C88F;
+        text-align: center;
+        font-size: 0.8em;
+    }
+    .link {
+        font-size: 1.1em;
+        &:before {
+            color: #A5C88F;
+            @extend .glyphicon;
+            margin-right: 5px;
+            content: "\e135";;
+        }
+        &:hover {
+            &:before {
+                top: -1px;
+                color: #EF847B;
+            }
+        }
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+#wis:target .hidden {display: block}
+#culturenglish:target .hidden {display: block}
+#sporteasy:target .hidden {display: block}
+#blef:target .hidden {display: block}
+#tnservices:target .hidden {display: block}
+#java:target .hidden {display: block}
 
 ul {
     margin-top: 40px;
@@ -56,7 +137,7 @@ ul {
     }
     .workip {
         width: 100%;
-        margin: 0;
+        margin: 150px 0 0 0;
         font-size: 0.9em;
         text-align: justify;
     }
@@ -68,6 +149,32 @@ ul {
         font-size: 0.6em;
         margin-right: 3px;
         content:"";
+    }
+    .item {
+        .tags {
+            width: 100%;
+            ul {
+                text-align: center;
+                padding-left: 0px;
+                li {
+                    width: inherit;
+                }
+                li + li {
+                    margin-left: 50px;
+                }
+            }
+        }
+        .description {
+            width: 100%;
+            p {
+                padding: 0px 20px;
+            }
+        }
+        .link {
+            text-align: center;
+            font-size: 2em;
+            margin: 40px 0;
+        }
     }
 }
 

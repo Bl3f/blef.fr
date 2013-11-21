@@ -23,6 +23,12 @@ def workip(request):
     return render(request, "front/workip.html", context)
 
 
+def _portfolio(request):
+    context = []
+
+    return render(request, "front/_portfolio.html", context)
+
+
 class BlefView(TemplateView):
 
     def get_context_data(self, **kwargs):
